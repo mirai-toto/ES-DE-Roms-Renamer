@@ -1,5 +1,7 @@
 import re
 
+from helpers import color_text
+
 def update_gamelist(filename, correct_filename, rom_extension, gamelist_path, perform_rename):
     old_path = f"./{filename}.{rom_extension}"
     new_path = f"./{correct_filename}.{rom_extension}"
@@ -12,6 +14,6 @@ def update_gamelist(filename, correct_filename, rom_extension, gamelist_path, pe
     if perform_rename:
         with open(gamelist_path, 'w') as file:
             file.write(new_content)
-        print(f"Updated gamelist paths from {old_path} to {new_path}")
+        print(f"Updated gamelist paths from {color_text(old_path, '33')} to {color_text(new_path, '32')}") # Yellow -> Green color
     else:
-        print(f"Would update gamelist paths from {old_path} to {new_path}")
+        print(f"Would update gamelist paths from {color_text(old_path, '33')}  to {color_text(new_path, '32')}") # Yellow -> Green color

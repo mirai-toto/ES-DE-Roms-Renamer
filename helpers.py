@@ -1,16 +1,30 @@
 import os
-import rules
+import re
+import json
 
-def get_correct_filename(invalid_filename):
+def remove_unnecessary_spaces(invalid_filename):
+    # Remove leading, trailing, and multiple consecutive spaces
+    filename = re.sub(r'\s+', ' ', invalid_filename).strip()
+    # Remove spaces before .partX
+    filename = re.sub(r'\s+\.part', '.part', filename)
+    return filename
+
+def load_rules_from_config(config_path):
+    with open(config_path, 'r') as file:
+        config = json.load(file)
+    return config['rules']
+
+def execute_rules(invalid_filename, rules):
     updated_filename = invalid_filename
 
-    updated_filename = rules.rename_disc_to_part(updated_filename)
-    updated_filename = rules.reorder_the_in_title(updated_filename)
-    updated_filename = rules.remove_unwanted_tags(updated_filename)
-    updated_filename = rules.remove_unnecessary_spaces(updated_filename)
-    updated_filename = rules.remove_square_bracketed_content(updated_filename)
+    for rule in rules:
+        updated_filename = re.sub(rule['pattern'], rule['replacement'], updated_filename).strip()
 
-    return updated_filename
+    return remove_unnecessary_spaces(updated_filename)
+
+def get_correct_filename(invalid_filename, config_path):
+    rules = load_rules_from_config(config_path)
+    return execute_rules(invalid_filename, rules)
 
 def color_text(text, color_code):
     return f"\033[{color_code}m{text}\033[0m"

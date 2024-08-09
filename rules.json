@@ -1,0 +1,209 @@
+{
+  "rules": [
+    {
+      "pattern": "\\(U\\)",
+      "replacement": "",
+      "description": "Remove the region code (U) indicating the USA."
+    },
+    {
+      "pattern": "\\(Europe\\)",
+      "replacement": "",
+      "description": "Remove the region code (Europe)."
+    },
+    {
+      "pattern": "\\(M\\d+\\)",
+      "replacement": "",
+      "description": "Remove the Mx region code where x is a number."
+    },
+    {
+      "pattern": "\\(Proto\\)",
+      "replacement": "",
+      "description": "Remove the (Proto) tag."
+    },
+    {
+      "pattern": "\\(\\d{4}-\\d{2}-\\d{2}\\)",
+      "replacement": "",
+      "description": "Remove date tags like (1993-10-04)."
+    },
+    {
+      "pattern": "\\(USA\\)",
+      "replacement": "",
+      "description": "Remove the region code (USA)."
+    },
+    {
+      "pattern": "\\(World\\)",
+      "replacement": "",
+      "description": "Remove the region code (World)."
+    },
+    {
+      "pattern": "\\(NDSi Enhanced\\)",
+      "replacement": "",
+      "description": "Remove the tag (NDSi Enhanced)."
+    },
+    {
+      "pattern": "\\(PSP\\)",
+      "replacement": "",
+      "description": "Remove the tag (PSP)."
+    },
+    {
+      "pattern": "\\(PSN\\)",
+      "replacement": "",
+      "description": "Remove the tag (PSN)."
+    },
+    {
+      "pattern": "\\(CGB\\+SGB Enhanced\\)",
+      "replacement": "",
+      "description": "Remove the tag (CGB+SGB Enhanced)."
+    },
+    {
+      "pattern": "\\(Demo\\)",
+      "replacement": "",
+      "description": "Remove the tag (Demo)."
+    },
+    {
+      "pattern": "\\(DSi Enhanced\\)",
+      "replacement": "",
+      "description": "Remove the tag (DSi Enhanced)."
+    },
+    {
+      "pattern": "\\(E\\)",
+      "replacement": "",
+      "description": "Remove the region code (E)."
+    },
+    {
+      "pattern": "\\(En,Fr,De\\)",
+      "replacement": "",
+      "description": "Remove the language code (En,Fr,De)."
+    },
+    {
+      "pattern": "\\(En,Fr,De,Es\\)",
+      "replacement": "",
+      "description": "Remove the language code (En,Fr,De,Es)."
+    },
+    {
+      "pattern": "\\(En,Fr,De,Es,It\\)",
+      "replacement": "",
+      "description": "Remove the language code (En,Fr,De,Es,It)."
+    },
+    {
+      "pattern": "\\(En,Fr,De,Es,It,Nl,Pt,Sv\\)",
+      "replacement": "",
+      "description": "Remove the language code (En,Fr,De,Es,It,Nl,Pt,Sv)."
+    },
+    {
+      "pattern": "\\(En,Fr,De,Es,It,Nl,Sv\\)",
+      "replacement": "",
+      "description": "Remove the language code (En,Fr,De,Es,It,Nl,Sv)."
+    },
+    {
+      "pattern": "\\(En,Fr,De,It\\)",
+      "replacement": "",
+      "description": "Remove the language code (En,Fr,De,It)."
+    },
+    {
+      "pattern": "\\(En,Fr,Es\\)",
+      "replacement": "",
+      "description": "Remove the language code (En,Fr,Es)."
+    },
+    {
+      "pattern": "\\(EU\\)",
+      "replacement": "",
+      "description": "Remove the region code (EU)."
+    },
+    {
+      "pattern": "\\(FR\\)",
+      "replacement": "",
+      "description": "Remove the region code (FR) indicating France."
+    },
+    {
+      "pattern": "\\(France\\)",
+      "replacement": "",
+      "description": "Remove the region code (France)."
+    },
+    {
+      "pattern": "\\(Japan\\)",
+      "replacement": "",
+      "description": "Remove the region code (Japan)."
+    },
+    {
+      "pattern": "\\(Japan, USA\\)",
+      "replacement": "",
+      "description": "Remove the region code (Japan, USA)."
+    },
+    {
+      "pattern": "\\(Kiosk\\)",
+      "replacement": "",
+      "description": "Remove the tag (Kiosk)."
+    },
+    {
+      "pattern": "\\(Mindscape\\)",
+      "replacement": "",
+      "description": "Remove the tag (Mindscape)."
+    },
+    {
+      "pattern": "\\(NTSC\\)",
+      "replacement": "",
+      "description": "Remove the tag (NTSC)."
+    },
+    {
+      "pattern": "\\(Promo\\)",
+      "replacement": "",
+      "description": "Remove the tag (Promo)."
+    },
+    {
+      "pattern": "\\(Rev \\d+\\)",
+      "replacement": "",
+      "description": "Remove the revision tag (Rev x) where x is a number."
+    },
+    {
+      "pattern": "\\(SGB Enhanced\\)",
+      "replacement": "",
+      "description": "Remove the tag (SGB Enhanced)."
+    },
+    {
+      "pattern": "\\(UE\\)",
+      "replacement": "",
+      "description": "Remove the region code (UE)."
+    },
+    {
+      "pattern": "\\(Unl\\)",
+      "replacement": "",
+      "description": "Remove the tag (Unl) indicating an unlicensed game."
+    },
+    {
+      "pattern": "\\(USA, Asia\\)",
+      "replacement": "",
+      "description": "Remove the region code (USA, Asia)."
+    },
+    {
+      "pattern": "\\(USA, Europe\\)",
+      "replacement": "",
+      "description": "Remove the region code (USA, Europe)."
+    },
+    {
+      "pattern": "^(.*?), The",
+      "replacement": "The $1",
+      "description": "Reorder titles from 'Title, The' to 'The Title'."
+    },
+    {
+      "pattern": "\\(v\\d+(\\.\\d+)*\\)",
+      "replacement": "",
+      "description": "Remove version tags like (v1.2.3)."
+    },
+    {
+      "pattern": "\\[.*?\\]",
+      "replacement": "",
+      "description": "Remove content enclosed in square brackets."
+    },
+    {
+      "pattern": "^(.*)\\(Disc (\\d+)\\)$",
+      "replacement": "$1.part$2",
+      "description": "Rename files ending with '(Disc x)' to '.partx'."
+    },
+    {
+      "pattern": "\\s+",
+      "replacement": " ",
+      "description": "Remove unnecessary spaces within the filename."
+    }
+  ]
+}
